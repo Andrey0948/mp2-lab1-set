@@ -9,7 +9,6 @@
 
 TBitField::TBitField(int len)
 {
-	this->BitLen;
 }
 
 TBitField::TBitField(const TBitField &bf) // конструктор копирования
@@ -54,6 +53,7 @@ int TBitField::GetBit(const int n) const // получить значение б
 
 TBitField& TBitField::operator=(const TBitField &bf) // присваивание
 {
+	return *this;
 }
 
 int TBitField::operator==(const TBitField &bf) const // сравнение
@@ -68,26 +68,27 @@ int TBitField::operator!=(const TBitField &bf) const // сравнение
 
 TBitField TBitField::operator|(const TBitField &bf) // операция "или"
 {
-	return 0;
+	return *this;
 }
 
 TBitField TBitField::operator&(const TBitField &bf) // операция "и"
 {
-	return 0;
+	return *this;
 }
 
 TBitField TBitField::operator~(void) // отрицание
 {
-	return 0;
+	return *this;
 }
 
 // ввод/вывод
 
 istream &operator>>(istream &istr, TBitField &bf) // ввод
 {
+	return istr;
 }
 
 ostream &operator<<(ostream &ostr, const TBitField &bf) // вывод
 {
-
+	return ostr;
 }
