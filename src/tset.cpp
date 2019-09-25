@@ -9,6 +9,7 @@
 
 TSet::TSet(int mp) : BitField(-1)
 {
+	this->MaxPower = mp;
 }
 
 // конструктор копирования
@@ -53,7 +54,7 @@ TSet& TSet::operator=(const TSet &s) // присваивание
 
 int TSet::operator==(const TSet &s) const // сравнение
 {
-  return 0;
+    return 0;
 }
 
 int TSet::operator!=(const TSet &s) const // сравнение
